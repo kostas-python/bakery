@@ -1,0 +1,11 @@
+
+.bg-zoom-out {
+    background-size: 40%;
+    background-repeat: no-repeat;
+  }
+
+.bg-zoom-in {
+    background-size: 400%;
+    background-repeat: no-repeat;
+  }
+  
