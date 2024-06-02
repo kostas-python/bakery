@@ -9,3 +9,10 @@
     background-repeat: no-repeat;
   }
   
+
+
+  .custom-bg {
+    background-size: cover;
+    background-position: center;
+  }
+
