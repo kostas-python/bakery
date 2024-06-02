@@ -4,6 +4,7 @@ import { NavbarComponent } from './Layout/navbar/navbar.component';
 import { FooterComponent } from './Layout/navbar/footer/footer.component';
 import { BlocksComponent } from './Layout/blocks/blocks/blocks.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
