@@ -14,4 +14,11 @@ export class NavbarComponent {
       block4.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  scrollToContact() {
+    const contact = document.getElementById('contact');
+    if (contact) {
+      contact.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
