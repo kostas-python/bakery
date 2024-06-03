@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  scrollToBlock4() {
+    const block4 = document.getElementById('block4');
+    if (block4) {
+      block4.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
