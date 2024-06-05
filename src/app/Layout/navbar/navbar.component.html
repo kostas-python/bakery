@@ -29,7 +29,7 @@
 
 
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true" [class.hidden]="!isMobileMenuOpen"></div>>
+    <div class="lg:hidden" role="dialog" aria-modal="true" [class.hidden]="!isMobileMenuOpen">
       <!-- Background backdrop, show/hide based on slide-over state. -->
 
       <div class="fixed inset-0 z-10" [class.hidden]="!isMobileMenuOpen"></div>
@@ -52,5 +52,6 @@
           <a href="#" class="text-2xl font-semibold leading-6 text-yellow-700" (click)="scrollToContact()">Contact</a>
         </div> 
        </div>
+      </div>
   </header>
   
