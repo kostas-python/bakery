@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import 'animate.css';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 
@@ -7,7 +8,7 @@ import 'animate.css';
 @Component({
   selector: 'app-blocks',
   standalone: true,
-  imports: [],
+  imports: [LazyLoadImageModule],
   templateUrl: './blocks.component.html',
   styleUrl: './blocks.component.css'
 })

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [LazyLoadImageModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
