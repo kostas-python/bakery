@@ -23,4 +23,10 @@ export class NavbarComponent {
       contact.scrollIntoView({ behavior: 'smooth' });
     }
   }
+  
+  isMobileMenuOpen = false;
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
