@@ -1,0 +1,270 @@
+
+// Import luxury fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+// Font families
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+// Global styles
+.luxury-bakery-container {
+  font-family: 'Montserrat', sans-serif;
+  color: #292524; // stone-800
+  
+  // Smooth scroll behavior
+  scroll-behavior: smooth;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  @extend .font-playfair;
+}
+
+// Gold gradient text effect
+.gold-gradient {
+  background: linear-gradient(135deg, #B8860B 0%, #FFD700 25%, #B8860B 50%, #FFD700 75%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: goldShimmer 3s ease infinite;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+// Hero section styles
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  .hero-image {
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    
+    img {
+      transition: transform 0.5s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Luxury card styles
+.luxury-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    
+    .card-image img {
+      transform: scale(1.1);
+    }
+  }
+  
+  .card-image {
+    overflow: hidden;
+    
+    img {
+      transition: transform 0.5s ease;
+    }
+  }
+}
+
+// Parallax effect
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+// Menu item cards
+.menu-item-card {
+  background: linear-gradient(135deg, #57534e 0%, #292524 100%);
+  border: 1px solid #57534e;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: #ca8a04; // yellow-600
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Testimonial cards
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .quote-icon {
+    color: #ca8a04;
+    opacity: 0.8;
+  }
+}
+
+// Button styles
+.luxury-button {
+  background: linear-gradient(135deg, #ca8a04 0%, #dc2626 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #dc2626 0%, #ca8a04 100%);
+  }
+}
+
+// Section transitions
+.section-enter {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.section-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
+}
+
+// Responsive typography
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+  
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .gold-gradient {
+    font-size: 2rem !important;
+  }
+}
+
+// Loading animation
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #B8860B;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1917; // stone-900
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ca8a04, #dc2626);
+  border-radius: 6px;
+  
+  &:hover {
+    background: linear-gradient(180deg, #dc2626, #ca8a04);
+  }
+}
+
+// Animation delays for staggered effects
+@for $i from 1 through 10 {
+  .stagger-#{$i} {
+    animation-delay: #{$i * 100}ms;
+  }
+}
+
+// Utility classes
+.text-shadow-luxury {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+// Special effects
+.glow-effect {
+  box-shadow: 0 0 20px rgba(202, 138, 4, 0.5);
+  
+  &:hover {
+    box-shadow: 0 0 30px rgba(202, 138, 4, 0.8);
+  }
+}
+
+// Bread image hover effect
+.bread-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.1);
+  }
+}

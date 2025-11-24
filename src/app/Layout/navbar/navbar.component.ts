@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',

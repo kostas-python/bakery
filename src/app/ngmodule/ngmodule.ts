@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   imports: [
-    LazyLoadImageModule
+    LazyLoadingModule
   ],
   exports: [
-    LazyLoadImageModule
+    LazyLoadingModule
   ]
 })
 export class LazyLoadingModule {}
