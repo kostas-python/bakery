@@ -1,0 +1,234 @@
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+// Font classes
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+// Contact section styles
+#contact {
+  position: relative;
+  
+  // Parallax effect
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  // Ensure text is readable
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  // Contact cards hover effect
+  .contact-card {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Footer styles
+footer {
+  // Newsletter input styles
+  input[type="email"] {
+    &::placeholder {
+      color: #a8a29e; // stone-400
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: #ca8a04; // yellow-600
+      box-shadow: 0 0 0 3px rgba(202, 138, 4, 0.1);
+    }
+  }
+  
+  // Social media icons hover effect
+  .social-icon {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: #ca8a04; // yellow-600
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  // Link hover effects
+  a {
+    position: relative;
+    
+    &.underline-hover {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #ca8a04; // yellow-600
+        transition: width 0.3s ease;
+      }
+      
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Back to top button
+.back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  #contact {
+    min-height: auto;
+    background-attachment: scroll;
+    
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  footer {
+    .newsletter-form {
+      flex-direction: column;
+      
+      input[type="email"] {
+        width: 100%;
+      }
+      
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Luxury touches
+.gold-accent {
+  color: #ca8a04; // yellow-600
+  
+  &:hover {
+    color: #eab308; // yellow-500
+  }
+}
+
+.luxury-border {
+  border-image: linear-gradient(to right, transparent, #ca8a04, transparent) 1;
+}
+
+// Award badges animation
+.award-badge {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Newsletter success message
+.newsletter-success {
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Print styles
+@media print {
+  #contact {
+    background-image: none !important;
+    background-color: #f5f5f4; // stone-100
+    color: #1c1917; // stone-900
+    
+    .bg-white\/10 {
+      background-color: transparent;
+      border: 1px solid #e7e5e4; // stone-300
+    }
+  }
+  
+  footer {
+    background-color: white;
+    color: #1c1917; // stone-900
+    
+    a {
+      color: #1c1917;
+    }
+  }
+  
+  .back-to-top {
+    display: none;
+  }
+}
